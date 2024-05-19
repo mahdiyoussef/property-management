@@ -21,10 +21,6 @@ def validate_body_request(validationobject:joi):
                 
                 
                 return fn(self,request, *args, **kwargs)
-
-                
-                return JsonResponse("Form incomplete",safe=False)
-                #return fn(self,request, *args, **kwargs)
             except Exception as e:
                 return JsonResponse(str(e), status=400, safe=False)
 
